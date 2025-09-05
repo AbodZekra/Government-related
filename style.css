@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(135deg,#0d3b1e,#1b5e20,#2e7d32);
+  background-attachment: fixed;
+  overflow-y: auto;
+  direction: rtl;
+}
+
+.container {
+  max-width: 900px;
+  margin: 10px auto;
+  padding: 30px 20px;
+  background: transparent;
+  backdrop-filter: blur(7px);
+  text-align: center;
+}
+
+/* الشعار */
+.image-wrapper {
+  perspective: 1000px;
+  width: 160px;
+  height: 160px;
+  margin: 20px auto 30px;
+}
+
+.rotating-image {
+  animation: rotate3d 8s infinite linear;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rotating-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes rotate3d {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+/* العناوين */
+.letter-header h1 {
+  font-size: 34px;
+  margin: 10px 0;
+  color: #ffc107;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #7bb8ffb2;
+  font-weight: bold;
+}
+
+.gold-outline {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Amiri', serif;
+  color: #ffc107;
+  -webkit-text-stroke: 1px #ffc107;
+}
+
+/* نص الرسالة */
+.letter-body {
+  margin-top: 25px;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+.letter-body p {
+  color: #f5f5f5;
+  font-size: 19px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  font-family: 'Cairo', sans-serif;
+}
+
+.letter-body strong {
+  color: #ffeb3b;
+  font-weight: bold;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.letter-body h3 {
+  color: #ffca28;
+  font-size: 22px;
+  margin: 20px 0 10px;
+  font-family: 'Tajawal', sans-serif;
+  text-align: center;
+}
+
+.letter-body ul {
+  list-style: disc;
+  padding-right: 25px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-family: 'Cairo', sans-serif;
+}
+
+.letter-body li {
+  margin: 8px 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.signature {
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #bbdefb;
+  text-align: left;
+  font-family: 'Amiri', serif;
+}
+
+/* استجابة الموبايل */
+@media (max-width: 600px) {
+  .letter-header h1 { font-size: 26px; }
+  .gold-outline { font-size: 22px; }
+  .letter-body p { font-size: 17px; }
+}
+
+.footer-links {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-links p {
+  color: #f5f5f5;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.stuvoice-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #1565c0;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.stuvoice-link:hover {
+  background: #0d47a1;
+  transform: scale(1.05);
+}
+
+.footer-note {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #f0f0f0;
+  font-style: italic;
+}
